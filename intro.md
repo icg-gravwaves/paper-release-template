@@ -2,7 +2,7 @@
 # Reproducible by construction: data release
 
 This is the data release for the paper *Reproducible by construction: a
-paper that documents its own release*, by Your Name, Second Author and
+paper that documents its own release*, by Gareth Cabourn Davies, Second Author and
 Third Author ([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)). The
 paper is its own example: besides a small worked example, its results
 describe how the paper and this release were built. The version used for

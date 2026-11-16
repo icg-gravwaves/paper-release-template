@@ -1,21 +1,20 @@
-# TEMPLATE: replace titles, authors, ORCID iDs, version, date, repository and
-# arXiv ID with your own. 0000-0002-1825-0097 is ORCID's official example iD.
+# TEMPLATE: replace titles, authors, version, date, repository and arXiv ID
+# with your own, and add each author's ORCID iD as orcid: "https://orcid.org/<iD>".
 cff-version: 1.2.0
 message: "If you use this code or data, please cite the paper below."
 title: "Reproducible by construction: data release"
 version: v2.0
 date-released: 2026-11-16
 authors:
-  - family-names: Name
-    given-names: Your
-    affiliation: Example Institute A
-    orcid: "https://orcid.org/0000-0002-1825-0097"
+  - family-names: Cabourn Davies
+    given-names: Gareth
+    affiliation: Institute of Cosmology and Gravitation, University of Portsmouth
   - family-names: Author
     given-names: Second
     affiliation: Example Institute B
   - family-names: Author
     given-names: Third
-    affiliation: Example Institute A
+    affiliation: Example Institute B
 # Code under MIT (LICENSE), data products under CC BY 4.0 (data/LICENSE)
 license:
   - MIT
@@ -26,8 +25,8 @@ preferred-citation:
   type: article
   title: "Reproducible by construction: a paper that documents its own release"
   authors:
-    - family-names: Name
-      given-names: Your
+    - family-names: Cabourn Davies
+      given-names: Gareth
     - family-names: Author
       given-names: Second
     - family-names: Author

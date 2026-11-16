@@ -1,7 +1,7 @@
 # Jupyter Book (v1) configuration for the paper's data release site.
 # TEMPLATE: replace the title and authors with your paper's
 title: "Reproducible by construction: data release"
-author: Your Name, Second Author and Third Author
+author: Gareth Cabourn Davies, Second Author and Third Author
 logo: ""
 # TEMPLATE: replace with the copyright year(s) and holder for your release.
 # Shown in the site footer as "© Copyright <year>, <holder>".
