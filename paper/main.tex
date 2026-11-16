@@ -72,17 +72,25 @@ assistant, directed and checked by the authors, and we discuss what that
 changes about producing releases like this one.
 \end{abstract}
 
+% Links to the release, given prominently straight after the abstract
+\vspace{0.5em}
+\noindent\fbox{\parbox{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}{%
+  \raggedright
+  \textbf{Code and data:} \url{\ReleaseRepo}
+  (version \href{\ReleaseRepo/tree/\ReleaseVersion}{\texttt{\ReleaseVersion}})\\[2pt]
+  \textbf{Data release:} \url{\ReleaseSite}}}
+
 \section{Introduction}
 Releasing the code and data behind a paper makes its results checkable and
 reusable, in line with the FAIR principles that research outputs, both
 data~\cite{wilkinson2016} and software~\cite{barker2022}, should be
-findable, accessible, interoperable and reusable. In practice, releases are
+Findable, Accessible, Interoperable and Reusable. In practice, releases are
 often assembled after the paper is written, and the figures and numbers in
 the paper drift away from the code that is released.
 
 Here the release is built alongside the paper, in one
-repository~\cite{data_release}: \url{\ReleaseRepo}, version
-\texttt{\ReleaseVersion}, with a rendered guide at \url{\ReleaseSite}.
+repository~\cite{data_release}, and rendered as a website; both are linked
+directly below the abstract.
 Section~\ref{sec:method} describes how it works,
 Section~\ref{sec:example} gives a small worked example, and
 Section~\ref{sec:self} applies the same machinery to the paper itself.
