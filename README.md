@@ -14,7 +14,7 @@ quoted numbers to paste into it, and that source kept in sync with Overleaf.
 - **How it works:** the *How this repository works* pages, starting at
   [`guide/repo_layout.md`](guide/repo_layout.md).
 - **Beyond this example:** [restricted and externally hosted
-  data](guide/restricted_data.md), and [open research across
+  data](guide/restricted_data.md), and pointers to [open research across
   disciplines](guide/open_research_across_disciplines.md).
 
 This README is also the front page of the website.
