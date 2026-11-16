@@ -36,6 +36,15 @@ jobs:
             echo "::error::Paste the updated LaTeX printed by the notebooks above into paper/main.tex"
             exit 1
           fi
+      # Compile the paper and publish the PDF with the site, at /paper.pdf,
+      # so it can be read without signing in to GitHub and never expires
+      - name: Compile the paper
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: paper
+      - name: Add the paper PDF to the site
+        run: cp paper/main.pdf _build/html/paper.pdf
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html

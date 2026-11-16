@@ -22,9 +22,15 @@ which builds locally and pushes `_build/html` to the `gh-pages` branch with
 
 ## The paper PDF
 
-`.github/workflows/paper.yml` compiles `paper/main.tex` whenever `paper/`
-changes and uploads the PDF as a workflow artifact. Co-authors who do not
-use Overleaf can download the latest draft from the Actions tab.
+The site workflow (`.github/workflows/book.yml`) compiles `paper/main.tex`
+and publishes the PDF with the site, at
+`https://<org>.github.io/<repo>/paper.pdf`. Anyone can read the latest draft
+there, without a GitHub account, and the link does not expire.
+
+`.github/workflows/paper.yml` also compiles the paper whenever `paper/`
+changes, including on pull requests, so a change that breaks the LaTeX is
+caught before it is merged. It keeps the PDF as a workflow artifact, which
+needs a GitHub sign-in to download and is deleted after 90 days.
 
 ## Optional: a citable, permanent archive
 

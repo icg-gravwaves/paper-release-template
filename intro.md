@@ -7,13 +7,14 @@ data alongside the text*, by Your Name, Second Author and Third Author
 for the paper is tagged
 [`v1.0`](https://github.com/icg-gravwaves/paper-release-template/tree/v1.0).
 
-% TEMPLATE: point this at your own repository's paper workflow
-The latest build of the paper PDF is attached, as the `paper-pdf` artifact,
-to the most recent run of the
-[paper workflow](https://github.com/icg-gravwaves/paper-release-template/actions/workflows/paper.yml?query=branch%3Amain).
-Open the run and download the artifact from the bottom of its page. GitHub
-requires you to be signed in to download artifacts, and deletes them after
-90 days.
+% TEMPLATE: point these at your own site and repository
+The latest build of the paper is at
+[**paper.pdf**](https://icg-gravwaves.github.io/paper-release-template/paper.pdf),
+compiled from `paper/main.tex` each time this site is published. Each run
+of the
+[paper workflow](https://github.com/icg-gravwaves/paper-release-template/actions/workflows/paper.yml?query=branch%3Amain)
+also keeps a copy as its `paper-pdf` artifact, which needs a GitHub sign-in
+to download and is deleted after 90 days.
 
 We release the code and the small data products behind every figure, table
 and number in the paper. Each page in the table of contents is executed when
