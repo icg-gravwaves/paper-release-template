@@ -15,7 +15,7 @@ The latest build of the paper is at
 compiled from `paper/main.tex` each time this site is published. Each run
 of the
 [paper workflow](https://github.com/icg-gravwaves/paper-release-template/actions/workflows/paper.yml?query=branch%3Amain)
-also keeps a copy as its `paper-pdf` artifact, which needs a GitHub sign-in
+also keeps a copy as its `paper-pdf` artefact, which needs a GitHub sign-in
 to download and is deleted after 90 days.
 
 We release the code and the small data products behind every figure, table

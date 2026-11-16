@@ -16,7 +16,7 @@ those take precedence.
 | Field | Preprint servers | Data repositories | Other common practices |
 |---|---|---|---|
 | Physics, astronomy, mathematics, computer science | arXiv | Zenodo; field archives and data centres | Software papers (e.g. JOSS); citing software and data |
-| Engineering | arXiv, TechRxiv | Zenodo, Figshare | Artifact evaluation and badges (e.g. ACM) |
+| Engineering | arXiv, TechRxiv | Zenodo, Figshare | Artefact evaluation and badges (e.g. ACM's Artifact Evaluation) |
 | Life sciences and medicine | bioRxiv, medRxiv | Dryad, Figshare; domain repositories (e.g. GEO, ENA); controlled access (e.g. EGA) | Trial and study registration; reporting guidelines (e.g. CONSORT, ARRIVE; see EQUATOR); protocols (e.g. protocols.io); research resource identifiers (RRIDs) |
 | Psychology and social sciences | PsyArXiv, SocArXiv, SSRN, OSF Preprints | OSF; UK Data Service, ICPSR | Preregistration and registered reports; reporting guidelines (e.g. PRISMA) |
 | Humanities | Institutional repositories, Humanities Commons | Institutional and national archives | Rights and permissions for source material; data are often texts, images or recordings |

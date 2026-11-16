@@ -1,4 +1,4 @@
-# Compile the paper PDF and keep it as a workflow artifact.
+# Compile the paper PDF and keep it as a workflow artefact.
 name: paper
 
 on:

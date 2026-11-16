@@ -29,7 +29,7 @@ there, without a GitHub account, and the link does not expire.
 
 `.github/workflows/paper.yml` also compiles the paper whenever `paper/`
 changes, including on pull requests, so a change that breaks the LaTeX is
-caught before it is merged. It keeps the PDF as a workflow artifact, which
+caught before it is merged. It keeps the PDF as a workflow artefact, which
 needs a GitHub sign-in to download and is deleted after 90 days.
 
 ## Optional: a citable, permanent archive

@@ -29,7 +29,7 @@
 ├── build_push_pages.sh    # Build the site locally and push it to gh-pages
 └── .github/workflows/
     ├── book.yml           # Build + deploy the site to GitHub Pages
-    └── paper.yml          # Compile paper/main.tex to a PDF artifact
+    └── paper.yml          # Compile paper/main.tex to a PDF artefact
 ```
 
 ## The flow from data to paper
