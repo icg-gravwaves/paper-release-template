@@ -1,0 +1,37 @@
+# Jupyter Book (v1) configuration for the paper's data release site.
+title: "Example paper: data release"
+author: Your Name and Co-Author
+logo: ""
+
+# Re-execute every notebook on each build so the published pages always
+# match the code. Notebooks that need large data or a cluster can be listed
+# in exclude_patterns; their stored outputs are then shown instead.
+execute:
+  execute_notebooks: force
+  timeout: 600
+  exclude_patterns: []
+
+exclude_patterns:
+  - ".venv"
+  - ".github"
+  - "_build"
+  - "paper"
+  - "**.ipynb_checkpoints"
+
+# Only build pages listed in _toc.yml
+only_build_toc_files: true
+
+repository:
+  url: https://github.com/YOUR_ORG/YOUR_REPO
+  branch: main
+
+html:
+  use_repository_button: true
+  use_issues_button: false
+  extra_footer: |
+    Code and small data products accompanying <em>Example paper</em>.
+
+sphinx:
+  config:
+    html_css_files:
+      - custom.css

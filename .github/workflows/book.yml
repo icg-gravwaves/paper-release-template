@@ -1,0 +1,47 @@
+# Build the Jupyter Book on every push and publish it to GitHub Pages from main.
+# Enable Pages in the repository settings with source "GitHub Actions".
+name: data-release-site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Build book (executes the notebooks)
+        run: jupyter-book build --warningiserror --keep-going .
+      - name: Check main.tex contains the latest tables and numbers
+        run: |
+          if grep -rl "NOT FOUND in paper/main.tex" _build/jupyter_execute; then
+            echo "::error::Paste the updated LaTeX printed by the notebooks above into paper/main.tex"
+            exit 1
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/html
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

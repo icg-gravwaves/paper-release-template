@@ -1,0 +1,16 @@
+format: jb-book
+root: intro.md
+parts:
+  - caption: The data release
+    chapters:
+      - file: data/README.md
+      - file: analysis/README.md
+        sections:
+          - file: analysis/figure_1_measurements.ipynb
+          - file: analysis/table_1_fit_results.ipynb
+  - caption: How this repository works
+    chapters:
+      - file: guide/repo_layout.md
+      - file: guide/paper_outputs.md
+      - file: guide/overleaf.md
+      - file: guide/publishing.md

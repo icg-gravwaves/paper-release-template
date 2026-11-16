@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Example paper: data release"
+authors:
+  - family-names: Name
+    given-names: Your
+repository-code: "https://github.com/YOUR_ORG/YOUR_REPO"
+preferred-citation:
+  type: article
+  title: "Example paper title"
+  authors:
+    - family-names: Name
+      given-names: Your
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:XXXX.XXXXX"

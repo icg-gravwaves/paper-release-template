@@ -1,0 +1,13 @@
+# conda env create -f environment.yml && conda activate paper_release
+name: paper_release
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - matplotlib
+  - ipykernel
+  - pip
+  - pip:
+      - "jupyter-book<2"
+      - ghp-import
