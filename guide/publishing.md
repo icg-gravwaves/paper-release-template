@@ -7,7 +7,8 @@ request and deploys it to GitHub Pages from `main`.
 
 One-off setup: in the repository on GitHub, **Settings → Pages → Build and
 deployment → Source: GitHub Actions**. The site appears at
-`https://YOUR_ORG.github.io/YOUR_REPO`.
+`https://<org>.github.io/<repo>`, for this template
+<https://icg-gravwaves.github.io/paper-release-template>.
 
 To publish from your own machine instead (for example when some notebooks
 need data that CI cannot download), use

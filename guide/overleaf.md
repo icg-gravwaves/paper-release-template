@@ -100,8 +100,10 @@ URL and refresh them later. Because the figures are committed to a public
 repository, each one has a stable URL:
 
 ```text
-https://raw.githubusercontent.com/YOUR_ORG/YOUR_REPO/main/paper/figure_1_measurements.pdf
+https://raw.githubusercontent.com/icg-gravwaves/paper-release-template/main/paper/figure_1_measurements.pdf
 ```
+
+Replace the organisation and repository with your own.
 
 1. In Overleaf, **Upload → From external URL**, paste the URL, and name the
    file `figure_1_measurements.pdf`.

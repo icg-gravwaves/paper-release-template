@@ -1,4 +1,5 @@
 # Jupyter Book (v1) configuration for the paper's data release site.
+# TEMPLATE: replace the title and authors with your paper's
 title: "Example paper: data release"
 author: Your Name and Co-Author
 logo: ""
@@ -21,13 +22,15 @@ exclude_patterns:
 # Only build pages listed in _toc.yml
 only_build_toc_files: true
 
+# TEMPLATE: point this at your own repository (used by the GitHub button)
 repository:
-  url: https://github.com/YOUR_ORG/YOUR_REPO
+  url: https://github.com/icg-gravwaves/paper-release-template
   branch: main
 
 html:
   use_repository_button: true
   use_issues_button: false
+  # TEMPLATE: replace with your paper's title
   extra_footer: |
     Code and small data products accompanying <em>Example paper</em>.
 

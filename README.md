@@ -5,7 +5,8 @@ a paper as a [Jupyter Book](https://jupyterbook.org) website, with the
 notebooks saving figures into the LaTeX source and printing tables and
 quoted numbers to paste into it, and that source kept in sync with Overleaf.
 
-- **Website:** https://YOUR_ORG.github.io/YOUR_REPO
+<!-- TEMPLATE: update these links to your own repository's -->
+- **Website:** https://icg-gravwaves.github.io/paper-release-template
 - **How it works:** the *How this repository works* pages on the website,
   starting at [`guide/repo_layout.md`](guide/repo_layout.md).
 
@@ -21,8 +22,12 @@ cd paper && make pdf          # compile the paper
 
 ## Using this template
 
-1. Replace `YOUR_ORG/YOUR_REPO`, titles and authors in `_config.yml`,
-   `intro.md`, `CITATION.cff` and `paper/main.tex`.
+1. Replace the repository links (`icg-gravwaves/paper-release-template`), titles and authors. Every
+   place that needs changing is marked with a `TEMPLATE:` comment:
+
+   ```bash
+   grep -rn "TEMPLATE:" --exclude-dir=_build .
+   ```
 2. Replace `analysis/generate_example_data.py` and
    `data/example_measurements.csv` with your own data products.
 3. Add one notebook per figure/table under `analysis/` and list it in

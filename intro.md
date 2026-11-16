@@ -1,3 +1,4 @@
+% TEMPLATE: replace the paper title and arXiv link below with your own
 # Data release
 
 This is the data release for the paper *Example paper title*

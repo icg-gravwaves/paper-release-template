@@ -34,7 +34,10 @@ def save_paper_figure(fig, name, formats=("pdf", "png")):
     for fmt in formats:
         path = PAPER_DIR / f"{name}.{fmt}"
         logging.debug("Writing figure %s", path)
-        fig.savefig(path)
+        # Drop the creation date so re-running an unchanged notebook gives an
+        # identical file and does not show up as a change in git
+        metadata = {"CreationDate": None} if fmt == "pdf" else None
+        fig.savefig(path, metadata=metadata)
     return PAPER_DIR / f"{name}.{formats[0]}"
 
 
