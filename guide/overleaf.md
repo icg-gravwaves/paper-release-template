@@ -10,7 +10,7 @@ group has.
 | Approach | Overleaf plan needed | What Overleaf sees | Direction |
 |---|---|---|---|
 | [A. Files from external URL](overleaf-url) | Free | Individual figures | Repository → Overleaf |
-| [B. git subtree](overleaf-subtree) (recommended) | Git integration (paid or institutional) | Only `paper/` | Both ways |
+| [B. git subtree](overleaf-subtree) | Git integration (paid or institutional) | Only `paper/` | Both ways |
 | [C. GitHub sync](overleaf-github) | GitHub sync (paid or institutional) | The whole repository | Both ways |
 
 (overleaf-url)=
@@ -37,7 +37,7 @@ Overleaf do not come back to the repository in this mode, so copy the final
 the release.
 
 (overleaf-subtree)=
-## B. git subtree of `paper/` (recommended)
+## B. git subtree of `paper/`
 
 Overleaf exposes every project as a git repository at
 `https://git.overleaf.com/<project id>`, with a single branch called
