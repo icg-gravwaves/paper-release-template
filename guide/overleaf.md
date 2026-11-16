@@ -13,6 +13,8 @@ group has, and whether the GitHub repository is public.
 | [B. git subtree](overleaf-subtree) | Git integration (paid or institutional) | Only `paper/` | Both ways |
 | [C. GitHub sync](overleaf-github) | GitHub sync (paid or institutional) | The whole repository | Both ways |
 
+Using your institution's own Overleaf server? See [](overleaf-self-hosted).
+
 (overleaf-url)=
 ## A. Figures from an external URL (free plan)
 
@@ -123,3 +125,41 @@ To use it with this layout:
 
 This works best when the data products are small and the repository is a
 manageable size for Overleaf.
+
+(overleaf-self-hosted)=
+## Self-hosted Overleaf
+
+Some institutions run their own Overleaf server. Which of the options above
+work depends on the edition and on how the server is configured, so check
+with whoever runs it.
+
+**Community Edition** (the free, open-source server)
+
+- No git integration and no GitHub sync, so options B and C are not
+  available.
+- Option A is off by default. An administrator has to enable importing
+  files from a URL in the server settings; recent versions also need a
+  separate proxy service that does the downloading, configured with the
+  `LINKED_URL_PROXY` environment variable.
+- The GitHub repository must still be public. The download comes from your
+  own server, but it still fetches from GitHub without logging in. The
+  server also needs outbound internet access, which some institutional
+  instances block.
+
+**Server Pro** (the paid self-hosted edition)
+
+- Recent versions include git integration, so option B works unchanged
+  apart from the remote address: set
+  `OVERLEAF_URL=https://<your-server>/git/<project id>` before running
+  `overleaf_sync.sh`, and generate the git token on that server.
+- GitHub sync (option C) is not available on self-hosted servers.
+- Option A has the same administrator setup and public-repository
+  requirement as the Community Edition.
+
+**In practice**
+
+- Server Pro: use option B; the repository can stay private.
+- Community Edition with URL import enabled: use option A, provided the
+  repository is public.
+- Otherwise: upload figures by hand (**Upload → From computer**) and paste
+  tables and numbers into `main.tex`, which needs no setup at all.
