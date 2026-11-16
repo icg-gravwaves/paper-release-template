@@ -1,13 +1,28 @@
-# conda env create -f environment.yml && conda activate paper_release
+# Software environment used to produce the paper and this data release.
+#
+#   conda env create -f environment.yml     (or: mamba / micromamba)
+#   conda activate paper_release
+#
+# Versions are pinned exactly, so anyone recreating the environment gets
+# the same results and the same-looking site. See guide/software_versions.md
+# for how to choose, update and record these pins.
+#
+# TEMPLATE: replace the packages with your own dependencies, and pin each to
+# the version you actually used (`conda list <package>` shows it).
 name: paper_release
 channels:
   - conda-forge
 dependencies:
-  - python=3.12
-  - numpy
-  - matplotlib
-  - ipykernel
-  - pip
-  - pip:
-      - "jupyter-book<2"
-      - ghp-import
+  - python=3.12.13
+  # Analysis
+  - numpy=2.5.5
+  - matplotlib-base=3.11.2   # matplotlib without the GUI toolkits
+  # Building the data release site
+  - jupyter-book=1.0.4.post1
+  - ipykernel=7.4.0
+  - ghp-import=2.1.0
+  # The site theme is pulled in by jupyter-book. It is pinned as well because
+  # new theme releases change the site's layout (for example, adding a
+  # second search box), not just its internals.
+  - sphinx-book-theme=1.2.0
+  - pydata-sphinx-theme=0.16.1

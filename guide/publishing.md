@@ -28,6 +28,10 @@ use Overleaf can download the latest draft from the Actions tab.
 
 ## A citable, permanent archive
 
+Archiving with a DOI, metadata and a licence is what makes the release
+Findable, Accessible and Reusable in the sense of the FAIR principles (see
+the [landing page](../intro.md)).
+
 GitHub repositories can be deleted or rewritten; a paper should cite an
 archived snapshot.
 
@@ -53,4 +57,8 @@ Zenodo record and fetched by a script in `data/` (see [](../data/README.md)).
 - [ ] `jupyter-book build .` passes from a clean clone with the released
       environment.
 - [ ] Overleaf and `paper/` are in sync (`./overleaf_sync.sh pull`).
+- [ ] `LICENSE` (and `license:` in `CITATION.cff`) is the licence you
+      want for this release.
+- [ ] Versions in `environment.yml` are pinned to what produced the paper
+      (see [](software_versions.md)).
 - [ ] A tagged release exists and its DOI is cited in the paper.

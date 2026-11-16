@@ -36,6 +36,19 @@ cd paper && make pdf          # compile the paper
 5. Enable GitHub Pages (source: GitHub Actions) and Zenodo archiving: see
    [`guide/publishing.md`](guide/publishing.md).
 
+## Licence
+
+This template is released under the [MIT licence](LICENSE).
+
+<!-- TEMPLATE: review the licence for your own release -->
+When you reuse it for a paper, choose the licence that fits your release
+and update `LICENSE` (and `license:` in `CITATION.cff`). MIT is a common
+choice for code. For data products and text, a Creative Commons licence such
+as [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) is more usual,
+and can be applied to `data/` with a separate licence file there. Check
+whether your funder, institution or collaboration requires a particular
+licence.
+
 ## Where data is stored
 
 Small text data products (under about 1 MB) are committed directly to git;

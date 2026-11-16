@@ -5,6 +5,7 @@ title: "Example paper: data release"
 authors:
   - family-names: Name
     given-names: Your
+license: MIT
 repository-code: "https://github.com/icg-gravwaves/paper-release-template"
 preferred-citation:
   type: article

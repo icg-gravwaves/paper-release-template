@@ -11,6 +11,7 @@ parts:
   - caption: How this repository works
     chapters:
       - file: guide/repo_layout.md
+      - file: guide/software_versions.md
       - file: guide/paper_outputs.md
       - file: guide/figure_style.md
       - file: guide/overleaf.md

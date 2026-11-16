@@ -5,8 +5,8 @@
 ├── _config.yml            # Jupyter Book settings (execution, repo link, theme)
 ├── _toc.yml               # Table of contents: which pages make up the site
 ├── intro.md               # Landing page of the data release
-├── environment.yml        # conda environment
-├── requirements.txt       # pip equivalent, used by CI
+├── environment.yml        # Pinned conda environment (also used by CI)
+├── LICENSE                # Licence for the release (MIT here)
 ├── paper.mplstyle         # One matplotlib style for every paper figure
 ├── CITATION.cff           # How to cite; shown by GitHub and read by Zenodo
 ├── common/

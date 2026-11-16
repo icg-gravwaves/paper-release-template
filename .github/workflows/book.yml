@@ -22,12 +22,13 @@ jobs:
         # uncomment the next two lines; each run then uses LFS bandwidth.
         # with:
         #   lfs: true
-      - uses: actions/setup-python@v5
+      # Build in exactly the environment released with the paper
+      - uses: mamba-org/setup-micromamba@v2
         with:
-          python-version: "3.12"
-          cache: pip
-      - run: pip install -r requirements.txt
+          environment-file: environment.yml
+          cache-environment: true
       - name: Build book (executes the notebooks)
+        shell: bash -el {0}
         run: jupyter-book build --warningiserror --keep-going .
       - name: Check main.tex contains the latest tables and numbers
         run: |
