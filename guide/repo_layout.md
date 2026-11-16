@@ -59,20 +59,27 @@ open _build/html/index.html
 `execute_notebooks: force` in `_config.yml` re-runs every notebook, which
 also regenerates the paper outputs.
 
-## Conventions worth keeping
+## Suggestions
 
-- **One notebook per paper item**, named after it
-  (`figure_1_...ipynb`, `table_1_...ipynb`), and the output file uses the
-  same name. Anyone reading the paper can find the code from the filename.
-- **Never type a number into the paper by hand.** Put it in
-  a `\newcommand` printed by a notebook, paste it into the preamble of
-  `main.tex`, and use the macro.
-- **Keep `paper/` flat and to one `.tex` file.** Many journals want every
-  source file in one directory and reject `\input` of other `.tex` files.
-  Figures sit next to `main.tex`; tables and macros are pasted into it.
-- **Paths come from `common/paths.py`**, not from the current working
+These are habits that worked well for this kind of release; adapt them to
+your project.
+
+- **Make it easy to find the code behind each paper item.** Name notebooks
+  and output files after what they produce (`figure_1_...`,
+  `table_1_...`), or after the analysis step when one notebook produces
+  several items. The table on the landing page then maps each figure and
+  table to its notebook.
+- **Consider generating numbers quoted in the text.** For results that may
+  change as the analysis evolves, a `\newcommand` printed by a notebook
+  and pasted into the preamble means each value is updated in one place.
+  Numbers that are fixed (survey sizes, published constants) can simply be
+  typed.
+- **Keep `paper/` flat and to one `.tex` file** if your journal requires it.
+  Many journals want every source file in one directory and reject
+  `\input` of other `.tex` files.
+- **Take paths from `common/paths.py`**, not from the current working
   directory, so notebooks behave the same in Jupyter, in `jupyter-book build`
   and in CI.
-- **Commit the generated figures.** Co-authors on Overleaf need them
+- **Commit the generated figures**, so co-authors on Overleaf have them
   without running any code. CI checks that `main.tex` contains the tables
   and numbers the notebooks currently print.

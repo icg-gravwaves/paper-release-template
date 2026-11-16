@@ -48,7 +48,8 @@ Zenodo record and fetched by a script in `data/` (see [](../data/README.md)).
 
 - [ ] Every figure and table in `main.tex` has a notebook that produces it,
       listed on the landing page.
-- [ ] No number in the text is typed by hand.
+- [ ] Numbers that come from the analysis match the latest data (for
+      example, the notebooks report `main.tex` as up to date).
 - [ ] `jupyter-book build .` passes from a clean clone with the released
       environment.
 - [ ] Overleaf and `paper/` are in sync (`./overleaf_sync.sh pull`).
