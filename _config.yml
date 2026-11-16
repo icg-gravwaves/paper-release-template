@@ -1,6 +1,6 @@
 # Jupyter Book (v1) configuration for the paper's data release site.
 # TEMPLATE: replace the title and authors with your paper's
-title: "Example Paper: data release"
+title: "Reproducible by construction: data release"
 author: Your Name, Second Author and Third Author
 logo: ""
 # TEMPLATE: replace with the copyright year(s) and holder for your release.
@@ -50,7 +50,7 @@ sphinx:
       use_repository_button: true
       # TEMPLATE: replace with your paper's title
       extra_footer: |
-        Code and small data products accompanying <em>Example Paper</em>.
+        Code and small data products accompanying <em>Reproducible by construction</em>.
       # Search lives in the left sidebar; don't repeat it in the top header bar
       navbar_persistent: []
       # "This page is generated from <file>" at the bottom of every page

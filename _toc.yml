@@ -10,6 +10,7 @@ parts:
         sections:
           - file: analysis/figure_1_measurements.ipynb
           - file: analysis/table_1_fit_results.ipynb
+          - file: analysis/how_this_paper_was_made.ipynb
   - caption: How this repository works
     chapters:
       - file: guide/repo_layout.md

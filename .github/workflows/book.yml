@@ -18,10 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        # The notebooks read only plain-git files. If one reads a Git LFS file,
-        # uncomment the next two lines; each run then uses LFS bandwidth.
-        # with:
-        #   lfs: true
+        with:
+          # Full history and tags: how_this_paper_was_made.ipynb reads the
+          # git history up to the release tag
+          fetch-depth: 0
+          # The notebooks read only plain-git files. If one reads a Git LFS
+          # file, uncomment the next line; each run then uses LFS bandwidth.
+          # lfs: true
       # Build in exactly the environment released with the paper
       - uses: mamba-org/setup-micromamba@v2
         with:

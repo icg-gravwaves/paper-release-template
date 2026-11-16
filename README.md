@@ -9,8 +9,8 @@ quoted numbers to paste into it, and that source kept in sync with Overleaf.
 - **Website:** https://icg-gravwaves.github.io/paper-release-template
 - **Paper PDF (latest build):** https://icg-gravwaves.github.io/paper-release-template/paper.pdf
 - **The example data release:** [`intro.md`](intro.md), the overview of the
-  example paper's release, with the notebooks that make its figures and
-  tables.
+  example paper's release. The paper, *Reproducible by construction*,
+  describes how it was itself built.
 - **How it works:** the *How this repository works* pages, starting at
   [`guide/repo_layout.md`](guide/repo_layout.md).
 

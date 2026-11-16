@@ -1,11 +1,13 @@
 % TEMPLATE: replace the paper title and arXiv link below with your own
-# Example Paper: data release
+# Reproducible by construction: data release
 
-This is the data release for the paper *Example Paper: releasing code and
-data alongside the text*, by Your Name, Second Author and Third Author
-([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)). The version used
-for the paper is tagged
-[`v1.0`](https://github.com/icg-gravwaves/paper-release-template/tree/v1.0).
+This is the data release for the paper *Reproducible by construction: a
+paper that documents its own release*, by Your Name, Second Author and
+Third Author ([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)). The
+paper is its own example: besides a small worked example, its results
+describe how the paper and this release were built. The version used for
+the paper is tagged
+[`v2.0`](https://github.com/icg-gravwaves/paper-release-template/tree/v2.0).
 
 % TEMPLATE: point these at your own site and repository
 The latest build of the paper is at
@@ -56,7 +58,10 @@ conda activate paper_release
 |---|---|---|
 | Figure 1 | [](analysis/figure_1_measurements.ipynb) | `paper/figure_1_measurements.pdf` |
 | Table 1 | [](analysis/table_1_fit_results.ipynb) | `tabular` printed for pasting into `main.tex` |
-| Numbers in Section II | [](analysis/table_1_fit_results.ipynb) | `\newcommand`s printed for pasting into the `main.tex` preamble |
+| Numbers in Section 3 | [](analysis/table_1_fit_results.ipynb) | `\newcommand`s printed for pasting into the `main.tex` preamble |
+| Figure 2 | [](analysis/how_this_paper_was_made.ipynb) | `paper/figure_2_repository_storage.pdf` |
+| Table 2 | [](analysis/how_this_paper_was_made.ipynb) | `tabular` printed for pasting into `main.tex` |
+| Numbers in Section 4 | [](analysis/how_this_paper_was_made.ipynb) | `\newcommand`s printed for pasting into the `main.tex` preamble |
 
 ## Overview
 

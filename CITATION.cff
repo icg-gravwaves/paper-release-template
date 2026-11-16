@@ -2,8 +2,8 @@
 # arXiv ID with your own. 0000-0002-1825-0097 is ORCID's official example iD.
 cff-version: 1.2.0
 message: "If you use this code or data, please cite the paper below."
-title: "Example Paper: data release"
-version: v1.0
+title: "Reproducible by construction: data release"
+version: v2.0
 date-released: 2026-11-16
 authors:
   - family-names: Name
@@ -24,7 +24,7 @@ repository-code: "https://github.com/icg-gravwaves/paper-release-template"
 url: "https://icg-gravwaves.github.io/paper-release-template"
 preferred-citation:
   type: article
-  title: "Example Paper: releasing code and data alongside the text"
+  title: "Reproducible by construction: a paper that documents its own release"
   authors:
     - family-names: Name
       given-names: Your
