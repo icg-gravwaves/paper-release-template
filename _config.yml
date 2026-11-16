@@ -3,6 +3,9 @@
 title: "Example paper: data release"
 author: Your Name and Co-Author
 logo: ""
+# TEMPLATE: replace with the copyright year(s) and holder for your release.
+# Shown in the site footer as "© Copyright <year>, <holder>".
+copyright: "2026, Gareth Cabourn Davies"
 
 # Re-execute every notebook on each build so the published pages always
 # match the code. Notebooks that need large data or a cluster can be listed
