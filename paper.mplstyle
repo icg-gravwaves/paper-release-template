@@ -1,4 +1,17 @@
-# Style based on: https://github.com/hosilva/physrev_mplstyle with changes
+# Matplotlib style for every figure in the paper.
+#
+# Usage (see guide/figure_style.md):
+#     plt.style.use("path/to/paper.mplstyle")      # whole notebook
+#     with plt.style.context("path/to/paper.mplstyle"):
+#         ...                                       # one block only
+# In this repository, notebooks call common.paths.use_paper_style().
+#
+# Sizes are set for a single journal column (3.25 in wide), so fonts in the
+# figure match the paper when included at width=\columnwidth. Measure your
+# journal's column with \the\columnwidth (in pt; 72.27 pt = 1 in) and
+# change figure.figsize if it differs.
+#
+# Based on https://github.com/hosilva/physrev_mplstyle with changes
 
 ### Colours
 # Based on seaborn 'colorblind' pallette converted to hex

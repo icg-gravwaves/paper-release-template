@@ -4,7 +4,7 @@ Each notebook in this section makes one paper item. They all follow the
 same pattern:
 
 1. Read a released data product from `data/`.
-2. Apply the shared style in `paper.mplstyle` (journal single-column width,
+2. Apply the shared style in `paper.mplstyle` ([](../guide/figure_style.md)) (journal single-column width,
    serif fonts, colour-blind-safe palette).
 3. Save figures directly into `paper/`, and print tables and numbers as
    LaTeX to paste into `paper/main.tex` (journals often reject `\input`).

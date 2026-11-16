@@ -22,7 +22,7 @@ writes `paper/figure_1_measurements.pdf` and `.png`. In LaTeX:
 \includegraphics[width=\columnwidth]{figure_1_measurements.pdf}
 ```
 
-`paper.mplstyle` sets the default figure size to a single journal column
+`paper.mplstyle` (see [](figure_style.md)) sets the default figure size to a single journal column
 (3.25 × 2 inches), so fonts in the figure match the text at
 `width=\columnwidth` with no rescaling. For a two-column figure, pass
 `figsize=(6.75, 3)` and use `width=\textwidth`.

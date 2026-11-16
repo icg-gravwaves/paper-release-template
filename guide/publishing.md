@@ -34,6 +34,9 @@ archived snapshot.
 1. Log in to [Zenodo](https://zenodo.org) with GitHub and enable the
    repository under **GitHub** in your Zenodo account.
 2. Fill in `CITATION.cff`; Zenodo uses it for the record's metadata.
+   If the repository uses Git LFS, also tick **Settings → General →
+   Archives → Include Git LFS objects in archives** on GitHub. Otherwise
+   the archive Zenodo stores contains only LFS pointer files, not the data.
 3. Create a GitHub release (e.g. `v1.0` when the paper is submitted,
    `v1.1` after referee changes). Zenodo archives it and issues a DOI.
 4. Put the DOI in `paper/bibliography.bib` and on the landing page.

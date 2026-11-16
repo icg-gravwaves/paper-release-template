@@ -12,5 +12,6 @@ parts:
     chapters:
       - file: guide/repo_layout.md
       - file: guide/paper_outputs.md
+      - file: guide/figure_style.md
       - file: guide/overleaf.md
       - file: guide/publishing.md

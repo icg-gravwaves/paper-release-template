@@ -11,7 +11,10 @@
 ├── CITATION.cff           # How to cite; shown by GitHub and read by Zenodo
 ├── common/
 │   └── paths.py           # Shared paths + save_paper_figure / show_for_paper
-├── data/                  # Small, released data products (committed)
+├── .gitattributes         # Which files are stored with Git LFS
+├── data/                  # Released data products
+│   ├── *.csv              # Small text products, plain git
+│   └── raw/               # Larger binary products, Git LFS
 ├── analysis/              # Notebooks that make figures/tables + data generation
 ├── guide/                 # These "how it works" pages
 ├── paper/                 # The LaTeX paper, flat (synced to Overleaf)
@@ -30,8 +33,9 @@
 ```text
  analysis/generate_example_data.py  (expensive step, run rarely)
               │
+              ├──► data/raw/example_raw_readings.npz  (3.5 MB raw data, Git LFS)
               ▼
-  data/example_measurements.csv     (small data product, committed + released)
+  data/example_measurements.csv     (1 kB reduced data, plain git)
               │
               ▼
   analysis/*.ipynb                  (run on every site build)

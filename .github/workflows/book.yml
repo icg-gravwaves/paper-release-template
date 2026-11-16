@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        # The notebooks read only plain-git files. If one reads a Git LFS file,
+        # uncomment the next two lines; each run then uses LFS bandwidth.
+        # with:
+        #   lfs: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

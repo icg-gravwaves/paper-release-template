@@ -36,6 +36,13 @@ cd paper && make pdf          # compile the paper
 5. Enable GitHub Pages (source: GitHub Actions) and Zenodo archiving: see
    [`guide/publishing.md`](guide/publishing.md).
 
+## Where data is stored
+
+Small text data products (under about 1 MB) are committed directly to git;
+larger binary files go through Git LFS (patterns in `.gitattributes`); data
+over about 1 GB goes to Zenodo. See [`data/README.md`](data/README.md) for
+the reasoning and the commands. Run `git lfs install` once before cloning.
+
 ## Notes for journal submission
 
 - `paper/` is flat and `main.tex` is the only `.tex` file: figures are saved
