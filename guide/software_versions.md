@@ -1,106 +1,69 @@
 # Software versions
 
-Code that runs today may not run, or may give different results, with the
-versions of its dependencies released in a few years. The release should
-record exactly which versions produced the paper, so anyone can rebuild
-that environment.
+This page records the software used to produce the paper and this site,
+and how that environment is described in the repository.
 
-## One environment file
+## The environment
 
-`environment.yml` is the single description of the software environment.
-It is used to:
+The whole environment is described by one file, `environment.yml`, which
+was used to:
 
-- set up the environment locally (`conda env create -f environment.yml`),
-- build this site in CI (`.github/workflows/book.yml` creates the same
-  environment with micromamba),
-- tell readers what the paper was produced with.
+- run the analysis and make the figures, tables and numbers in the paper,
+- build this site, both locally and in CI
+  (`.github/workflows/book.yml` creates the same environment with
+  micromamba).
 
-Keep one file rather than an `environment.yml` and a `requirements.txt`
-side by side: two lists drift apart, and readers cannot tell which one
-produced the paper. Conda can also install packages pip cannot, such as
-compiled libraries (for example LALSuite or FFTW), and packages that only
-exist on PyPI can still go in a `pip:` section of the same file.
+It can be recreated with
 
-## Pin exact versions
-
-Each package in `environment.yml` is pinned to one version:
-
-```yaml
-dependencies:
-  - python=3.12.13
-  - numpy=2.5.5
-  - matplotlib-base=3.11.2
+```bash
+conda env create -f environment.yml
+conda activate paper_release
 ```
 
-rather than left open (`- numpy`) or given a range (`- numpy>=2`). With
-open versions, rebuilding the environment later installs whatever is
-newest, which can change numbers, break code, or change how the site
-looks.
+All packages come from [conda-forge](https://conda-forge.org). Packages
+that are only on PyPI could be added in a `pip:` section of the same file.
 
-This template shows why the last one matters: a new release of the site
-theme, pulled in by Jupyter Book, added a second search box to every page.
-Pinning `sphinx-book-theme` and `pydata-sphinx-theme` keeps the site the
-way it was released.
+## Pinned versions
 
-### What to pin
+Each package is pinned to the exact version used:
 
-- **Python itself**, and every package your code imports directly.
-- **Packages that affect output** even if you do not import them, such as
-  the site theme here.
-- **Code from a git repository or fork**, by commit, not by branch:
+| Package | Version | Used for |
+|---|---|---|
+| Python | 3.12.13 | |
+| NumPy | 2.5.5 | Fits and data handling |
+| Matplotlib (`matplotlib-base`) | 3.11.2 | Figures |
+| Jupyter Book | 1.0.4.post1 | Building this site |
+| ipykernel | 7.4.0 | Running the notebooks |
+| ghp-import | 2.1.0 | Publishing the site from a local build |
+| sphinx-book-theme | 1.2.0 | Site theme |
+| pydata-sphinx-theme | 0.16.1 | Site theme |
+
+Later versions of these packages may change results, stop the code from
+running, or change how the site looks. The two theme packages are pinned
+even though they are only pulled in by Jupyter Book for the last reason: a
+newer theme release adds a second search box to every page.
+
+Packages that are needed only by the ones above are not pinned, and conda
+chooses compatible versions for them.
+
+## If you are adapting this
+
+A few notes for anyone reusing this setup for their own paper:
+
+- `conda list <package>` in the environment you used shows the version to
+  pin.
+- Code installed from a git repository or a fork is best pinned by commit
+  rather than branch, since a branch moves:
 
   ```yaml
     - pip:
-        - git+https://github.com/<org>/<package>.git@<full commit hash>
+        - git+https://github.com/<org>/<package>.git@<commit hash>
   ```
 
-  A branch moves; a commit does not. Say in the release notes why a fork
-  is needed.
-
-Packages that only your dependencies need are left for conda to resolve.
-
-### Finding the versions you used
-
-In the environment that produced the results:
-
-```bash
-conda list numpy matplotlib        # versions of particular packages
-conda env export --from-history    # the packages you asked for, by name
-```
-
-then copy the versions into `environment.yml`.
-
-## A fully locked environment (optional)
-
-Pinning direct dependencies is usually enough. For an exact, every-package
-record, export the whole environment as well and release it alongside:
-
-```bash
-conda env export --no-builds > environment.lock.linux-64.yml
-```
-
-A full export is specific to the operating system (a Linux export may not
-install on macOS), so name it by platform and keep `environment.yml` as the
-main, portable file. [conda-lock](https://github.com/conda/conda-lock) can
-produce lock files for several platforms from `environment.yml`.
-
-## When to pin
-
-- **While developing**, loose versions are fine and make upgrading easy.
-- **When the results for the paper are final**, pin everything to what you
-  ran, rebuild the environment from the file, and check that the notebooks
-  still produce the same figures, tables and numbers. CI does this on every
-  push.
-- **At each tagged release** (submission, referee response, publication),
-  the pins are recorded with the code in that tag.
-
-## Other versions to record
-
-- **The code itself**: point readers to the tagged release used for the
-  paper (and its DOI, if archived), not just the `main` branch, which
-  keeps changing.
-- **GitHub Actions**: the workflows use major-version tags
-  (`actions/checkout@v4`). These change rarely and are not part of the
-  results, so pinning them further is optional.
-- **Data products**: regenerate them with the pinned environment before the
-  final release, so the files match the code that is archived.
+- For a record of every package, `conda env export --no-builds` writes the
+  complete environment. That file is specific to the operating system it
+  was made on, so it is best kept as a supplement to `environment.yml`.
+  [conda-lock](https://github.com/conda/conda-lock) can produce lock files
+  for several platforms.
+- The GitHub Actions in `.github/workflows/` use major-version tags
+  (`actions/checkout@v4`); they affect only CI, not the results.

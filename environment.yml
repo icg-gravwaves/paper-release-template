@@ -3,9 +3,9 @@
 #   conda env create -f environment.yml     (or: mamba / micromamba)
 #   conda activate paper_release
 #
-# Versions are pinned exactly, so anyone recreating the environment gets
-# the same results and the same-looking site. See guide/software_versions.md
-# for how to choose, update and record these pins.
+# Versions are pinned to exactly those used, so recreating the environment
+# gives the same results and the same-looking site. guide/software_versions.md
+# describes the environment.
 #
 # TEMPLATE: replace the packages with your own dependencies, and pin each to
 # the version you actually used (`conda list <package>` shows it).
