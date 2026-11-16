@@ -26,8 +26,10 @@ any of it.
 | ② | Search box | Built in to the theme. It searches the text of every page in `_toc.yml`. |
 | ③ | Navigation | `_toc.yml`. Each `caption:` becomes a section heading ("The data release", "How this repository works"), each `file:` becomes a link, and `sections:` nest under their chapter. The link text is the **first heading** of that file, so `# Figure 1: measurements and fits` in a notebook's first Markdown cell is what appears here. |
 
-The landing page is the `root:` file in `_toc.yml` (`intro.md`), and its
-first heading is the landing page's title.
+The front page is the `root:` file in `_toc.yml`. Here that is the
+repository's `README.md`, so GitHub and the site open on the same page;
+its first heading is the front page's title. The overview of the example
+data release, `intro.md`, is the first page after it.
 
 ## Header buttons
 

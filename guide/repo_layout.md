@@ -6,7 +6,8 @@
 ├── _toc.yml               # Table of contents: which pages make up the site
 ├── _templates/            # Extra page templates (the "generated from" line)
 ├── _static/               # Custom CSS
-├── intro.md               # Landing page of the data release
+├── README.md              # Front page, on GitHub and the website
+├── intro.md               # Overview of the example data release
 ├── environment.yml        # Pinned conda environment (also used by CI)
 ├── LICENSE                # Licence for the release (MIT here)
 ├── paper.mplstyle         # One matplotlib style for every paper figure
@@ -69,7 +70,7 @@ your project.
 - **Make it easy to find the code behind each paper item.** Name notebooks
   and output files after what they produce (`figure_1_...`,
   `table_1_...`), or after the analysis step when one notebook produces
-  several items. The table on the landing page then maps each figure and
+  several items. The table in `intro.md` then maps each figure and
   table to its notebook.
 - **Consider generating numbers quoted in the text.** For results that may
   change as the analysis evolves, a `\newcommand` printed by a notebook

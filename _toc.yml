@@ -1,8 +1,10 @@
 format: jb-book
-root: intro.md
+# README.md is the front page, on GitHub and on the site
+root: README.md
 parts:
   - caption: The data release
     chapters:
+      - file: intro.md
       - file: data/README.md
       - file: analysis/README.md
         sections:

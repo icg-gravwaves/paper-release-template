@@ -7,8 +7,13 @@ quoted numbers to paste into it, and that source kept in sync with Overleaf.
 
 <!-- TEMPLATE: update these links to your own repository's -->
 - **Website:** https://icg-gravwaves.github.io/paper-release-template
-- **How it works:** the *How this repository works* pages on the website,
-  starting at [`guide/repo_layout.md`](guide/repo_layout.md).
+- **The example data release:** [`intro.md`](intro.md), the overview of the
+  example paper's release, with the notebooks that make its figures and
+  tables.
+- **How it works:** the *How this repository works* pages, starting at
+  [`guide/repo_layout.md`](guide/repo_layout.md).
+
+This README is also the front page of the website.
 
 ## Quick start
 
@@ -22,8 +27,8 @@ cd paper && make pdf          # compile the paper
 
 ## Using this template
 
-1. Replace the repository links (`icg-gravwaves/paper-release-template`), titles and authors. Every
-   place that needs changing is marked with a `TEMPLATE:` comment:
+1. Replace the repository links (`icg-gravwaves/paper-release-template`),
+   titles and authors. Every place that needs changing is marked with a `TEMPLATE:` comment:
 
    ```bash
    grep -rn "TEMPLATE:" --exclude-dir=_build .
@@ -31,11 +36,11 @@ cd paper && make pdf          # compile the paper
 2. Replace `analysis/generate_example_data.py` and
    `data/example_measurements.csv` with your own data products.
 3. Add notebooks that make your figures and tables under `analysis/`, and
-   list them in `_toc.yml` and the table on `intro.md`.
+   list them in `_toc.yml` and the table in `intro.md`.
 4. Connect `paper/` to Overleaf: see [`guide/overleaf.md`](guide/overleaf.md).
 5. Enable GitHub Pages (source: GitHub Actions), and optionally archive
-   releases on Zenodo: see
-   [`guide/publishing.md`](guide/publishing.md).
+   releases on Zenodo: see [`guide/publishing.md`](guide/publishing.md).
+6. Rewrite this README as the front page for your own release.
 
 ## Licence
 
@@ -47,9 +52,8 @@ and the data products in `data/` under
 When you reuse it for a paper, choose the licences that fit your release
 and update `LICENSE`, `data/LICENSE` and `license:` in `CITATION.cff`. MIT
 is a common choice for code, and a Creative Commons licence such as CC BY
-4.0 is more usual for data and text. Check
-whether your funder, institution or collaboration requires a particular
-licence.
+4.0 is more usual for data and text. Check whether your funder,
+institution or collaboration requires a particular licence.
 
 ## Where data is stored
 
@@ -67,7 +71,8 @@ the reasoning and the commands. Run `git lfs install` once before cloning.
   `main.tex`. Some publishers' production teams ask for custom macros to be
   expanded before typesetting. If yours does, have the notebook print each
   plain value and type it into the text instead; the CI check still flags
-  a value that no longer matches the data (see `guide/paper_outputs.md`). Otherwise keep the
+  a value that no longer matches the data (see
+  [`guide/paper_outputs.md`](guide/paper_outputs.md)). Otherwise keep the
   macros, so each number is updated in one place.
 
 This template uses Jupyter Book 1 (`_config.yml` / `_toc.yml`).

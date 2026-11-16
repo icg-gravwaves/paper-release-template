@@ -43,7 +43,7 @@ Zenodo:
 3. Create a GitHub release (e.g. `v1.0` when the paper is submitted,
    `v1.1` after referee changes). Zenodo archives it and issues a DOI.
 4. Cite the DOI in `paper/bibliography.bib` and the data availability
-   statement, and add it to the landing page.
+   statement, and add it to the README and `intro.md`.
 
 Large data products that do not belong in git can be uploaded to a separate
 Zenodo record and fetched by a script in `data/` (see [](../data/README.md)).
@@ -51,7 +51,7 @@ Zenodo record and fetched by a script in `data/` (see [](../data/README.md)).
 ## Checklist before submission
 
 - [ ] Every figure and table in `main.tex` has a notebook that produces it,
-      listed on the landing page.
+      listed in the table in `intro.md`.
 - [ ] Numbers that come from the analysis match the latest data (for
       example, the notebooks report `main.tex` as up to date).
 - [ ] `jupyter-book build .` passes from a clean clone with the released
