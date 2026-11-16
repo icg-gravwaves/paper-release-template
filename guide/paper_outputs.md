@@ -73,6 +73,25 @@ once and every mention of it updates together. LaTeX macro names cannot
 contain digits, so spell them out (`\NPointsPerGroup`, not
 `\NPoints1`).
 
+### Counts as words
+
+Counts that appear in prose are written as words up to nine and as digits
+above ("four groups", "17 commits"), with a capitalised form for the start
+of a sentence. `count_macros` in `common/text.py` produces both:
+
+```python
+from common.text import count_macros
+
+macros = {**count_macros("NGroups", 4)}
+# {"NGroups": "four", "NGroupsCap": "Four"}
+```
+
+LaTeX cannot tell where a sentence starts, so the text chooses:
+`\NGroupsCap{} groups were fitted` at the start of a sentence, and
+`each of \NGroups{} groups` elsewhere. If the count changes from nine to
+ten the macros switch to digits, and `\NGroupsCap` is then the same as
+`\NGroups`.
+
 ### If a journal asks for macros to be expanded
 
 A preamble full of `\newcommand`s stays inside the single `main.tex`, so it

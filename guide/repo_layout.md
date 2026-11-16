@@ -13,7 +13,8 @@
 ├── paper.mplstyle         # One matplotlib style for every paper figure
 ├── CITATION.cff           # How to cite; shown by GitHub
 ├── common/
-│   └── paths.py           # Shared paths + save_paper_figure / show_for_paper
+│   ├── paths.py           # Shared paths + save_paper_figure / show_for_paper
+│   └── text.py            # Counts as words for the text (count_macros)
 ├── .gitattributes         # Which files are stored with Git LFS
 ├── data/                  # Released data products (with their own LICENSE)
 │   ├── *.csv              # Small text products, plain git
