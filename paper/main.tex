@@ -29,11 +29,6 @@
 \newcommand{\NLFSFiles}{one}
 \newcommand{\NLFSFilesCap}{One}
 \newcommand{\LFSDataSize}{3.5\,MB}
-\newcommand{\NCommitsAtRelease}{17}
-\newcommand{\NCommitsAtReleaseCap}{17}
-\newcommand{\NAICommitsAtRelease}{17}
-\newcommand{\NAICommitsAtReleaseCap}{17}
-\newcommand{\HistoryTag}{v1.0}
 
 % Where the code and data for this paper live. Every link in the paper is
 % built from these, so they only need changing here.
@@ -193,13 +188,8 @@ Figure~\ref{fig:storage} shows where every file in the repository is
 stored. Everything is small enough for plain git except the raw
 measurements: \NLFSFiles{} file of \LFSDataSize{}, stored with Git LFS.
 
-Up to the first tagged release, \texttt{\HistoryTag}, \NAICommitsAtRelease{}
-of the \NCommitsAtRelease{} commits in the git history were made with an AI
-coding assistant (Section~\ref{sec:ai}).
-
-These measurements must not depend on the paper's own text. Every
-measurement leaves out the paper's directory, and the history is read up
-to a fixed tag rather than to the latest commit: otherwise pasting in the new
+These measurements must not depend on the paper's own text, so every
+measurement leaves out the paper's directory: otherwise pasting in the new
 numbers would change them again, and the check in
 Section~\ref{sec:method} could never pass.
 
@@ -253,8 +243,12 @@ matter more, not less, when much of the code is written this way, and the
 authors remain responsible for all of it.
 
 \section{Limitations}
-Tables and numbers are pasted by hand and only checked automatically;
-figures are regenerated but not compared with the committed files. Git LFS
+Tables and numbers have to be pasted by hand only because many journals
+require a single, flat LaTeX source and reject \verb|\input| of other
+files. Without that requirement, the notebooks could write them to files
+that the paper includes directly, as they already do for figures; with it,
+the check in Section~\ref{sec:method} ensures the pasted copies match the
+code. Figures are regenerated but not compared with the committed files. Git LFS
 storage counts against a quota. Unpinned dependencies of the pinned
 packages can still change, and releasing a full lock file would record
 them too. Finally, the approach assumes a manuscript written in LaTeX, as
