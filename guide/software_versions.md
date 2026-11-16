@@ -92,12 +92,13 @@ produce lock files for several platforms from `environment.yml`.
   still produce the same figures, tables and numbers. CI does this on every
   push.
 - **At each tagged release** (submission, referee response, publication),
-  the pins are archived with the code on Zenodo.
+  the pins are recorded with the code in that tag.
 
 ## Other versions to record
 
-- **The code itself**: cite the tagged release and its Zenodo DOI, not the
-  `main` branch.
+- **The code itself**: point readers to the tagged release used for the
+  paper (and its DOI, if archived), not just the `main` branch, which
+  keeps changing.
 - **GitHub Actions**: the workflows use major-version tags
   (`actions/checkout@v4`). These change rarely and are not part of the
   results, so pinning them further is optional.

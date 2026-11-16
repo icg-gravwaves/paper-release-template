@@ -33,7 +33,8 @@ cd paper && make pdf          # compile the paper
 3. Add notebooks that make your figures and tables under `analysis/`, and
    list them in `_toc.yml` and the table on `intro.md`.
 4. Connect `paper/` to Overleaf: see [`guide/overleaf.md`](guide/overleaf.md).
-5. Enable GitHub Pages (source: GitHub Actions) and Zenodo archiving: see
+5. Enable GitHub Pages (source: GitHub Actions), and optionally archive
+   releases on Zenodo: see
    [`guide/publishing.md`](guide/publishing.md).
 
 ## Licence

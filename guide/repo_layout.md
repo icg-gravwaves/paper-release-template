@@ -10,7 +10,7 @@
 ├── environment.yml        # Pinned conda environment (also used by CI)
 ├── LICENSE                # Licence for the release (MIT here)
 ├── paper.mplstyle         # One matplotlib style for every paper figure
-├── CITATION.cff           # How to cite; shown by GitHub and read by Zenodo
+├── CITATION.cff           # How to cite; shown by GitHub
 ├── common/
 │   └── paths.py           # Shared paths + save_paper_figure / show_for_paper
 ├── .gitattributes         # Which files are stored with Git LFS

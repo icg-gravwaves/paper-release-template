@@ -11,23 +11,21 @@ this site is built, so what you see here is exactly what the code produces.
 The source is at
 <https://github.com/icg-gravwaves/paper-release-template>.
 
-## FAIR data and code
+## Open research
 
-This release aims to follow the FAIR principles: research outputs should be
-**F**indable, **A**ccessible, **I**nteroperable and **R**eusable
-([Wilkinson et al. 2016](https://doi.org/10.1038/sdata.2016.18); for
-software, [FAIR4RS, Barker et al. 2022](https://doi.org/10.1038/s41597-022-01710-x)).
-What that means in practice here:
+Releasing the code and data behind a paper like this supports the
+[FAIR principles](https://doi.org/10.1038/sdata.2016.18), that research
+outputs should be **F**indable, **A**ccessible, **I**nteroperable and
+**R**eusable. In this release:
 
-| Principle | How this release meets it |
-|---|---|
-| **Findable** | Each tagged release is archived on Zenodo with a DOI (a persistent identifier) and metadata from `CITATION.cff`, and is indexed there. The paper cites that DOI, and links to this site and the repository. |
-| **Accessible** | Everything is public over standard HTTPS: this site, the GitHub repository, and the Zenodo archive, which keeps the record and its metadata even if the repository changes or disappears. Larger files come with the repository through Git LFS; very large inputs are fetched from Zenodo by a script. |
-| **Interoperable** | Data products use open, documented formats (CSV with described columns, NumPy `.npz`; HDF5 is a good choice for larger, more structured data). Figures are PDF and PNG. The analysis uses standard, open-source Python tools. |
-| **Reusable** | A clear licence (`LICENSE`), a recorded provenance for every figure, table and number (the table below), and an exactly pinned software environment (`environment.yml`), so results can be reproduced and built on. `CITATION.cff` says how to credit the work. |
-
-See [](guide/publishing.md) for the steps that make a release FAIR, and
-[](guide/software_versions.md) for how the environment is pinned.
+- **Findable:** the paper links to this site and the repository.
+- **Accessible:** everything is public, and the site needs nothing
+  installed to read.
+- **Interoperable:** data products are in open, documented formats (CSV,
+  NumPy `.npz`) and the analysis uses standard open-source tools.
+- **Reusable:** there is a licence (`LICENSE`), every figure, table and
+  number can be traced to the notebook that made it (table below), and the
+  software environment is pinned (`environment.yml`).
 
 ## Reproducing the environment
 

@@ -26,14 +26,13 @@ which builds locally and pushes `_build/html` to the `gh-pages` branch with
 changes and uploads the PDF as a workflow artifact. Co-authors who do not
 use Overleaf can download the latest draft from the Actions tab.
 
-## A citable, permanent archive
+## Optional: a citable, permanent archive
 
-Archiving with a DOI, metadata and a licence is what makes the release
-Findable, Accessible and Reusable in the sense of the FAIR principles (see
-the [landing page](../intro.md)).
-
-GitHub repositories can be deleted or rewritten; a paper should cite an
-archived snapshot.
+Linking to the GitHub repository from the paper is enough for most
+releases. If you also want a permanent snapshot with its own DOI, for
+example because the repository might later be deleted or rewritten, or
+because a journal or funder asks for one, archive tagged releases on
+Zenodo:
 
 1. Log in to [Zenodo](https://zenodo.org) with GitHub and enable the
    repository under **GitHub** in your Zenodo account.
@@ -43,7 +42,8 @@ archived snapshot.
    the archive Zenodo stores contains only LFS pointer files, not the data.
 3. Create a GitHub release (e.g. `v1.0` when the paper is submitted,
    `v1.1` after referee changes). Zenodo archives it and issues a DOI.
-4. Put the DOI in `paper/bibliography.bib` and on the landing page.
+4. Cite the DOI in `paper/bibliography.bib` and the data availability
+   statement, and add it to the landing page.
 
 Large data products that do not belong in git can be uploaded to a separate
 Zenodo record and fetched by a script in `data/` (see [](../data/README.md)).
@@ -61,4 +61,5 @@ Zenodo record and fetched by a script in `data/` (see [](../data/README.md)).
       want for this release.
 - [ ] Versions in `environment.yml` are pinned to what produced the paper
       (see [](software_versions.md)).
-- [ ] A tagged release exists and its DOI is cited in the paper.
+- [ ] The paper links to the repository (and to an archived DOI, if you
+      made one).
