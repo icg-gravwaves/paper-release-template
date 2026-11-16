@@ -38,3 +38,6 @@ sphinx:
   config:
     html_css_files:
       - custom.css
+    html_theme_options:
+      # Search lives in the left sidebar; don't repeat it in the top header bar
+      navbar_persistent: []
