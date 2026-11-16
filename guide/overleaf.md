@@ -9,12 +9,35 @@ group has.
 
 | Approach | Overleaf plan needed | What Overleaf sees | Direction |
 |---|---|---|---|
-| [A. git subtree](overleaf-subtree) (recommended) | Git integration (paid or institutional) | Only `paper/` | Both ways |
-| [B. GitHub sync](overleaf-github) | GitHub sync (paid or institutional) | The whole repository | Both ways |
-| [C. Files from external URL](overleaf-url) | Free | Individual figures | Repository → Overleaf |
+| [A. Files from external URL](overleaf-url) | Free | Individual figures | Repository → Overleaf |
+| [B. git subtree](overleaf-subtree) (recommended) | Git integration (paid or institutional) | Only `paper/` | Both ways |
+| [C. GitHub sync](overleaf-github) | GitHub sync (paid or institutional) | The whole repository | Both ways |
+
+(overleaf-url)=
+## A. Figures from an external URL (free plan)
+
+Without git integration, Overleaf can still import individual files from a
+URL and refresh them later. Because the figures are committed to a public
+repository, each one has a stable URL:
+
+```text
+https://raw.githubusercontent.com/icg-gravwaves/paper-release-template/main/paper/figure_1_measurements.pdf
+```
+
+Replace the organisation and repository with your own.
+
+1. In Overleaf, **Upload → From external URL**, paste the URL, and name the
+   file `figure_1_measurements.pdf`.
+2. When the notebook changes the figure, push to GitHub, then click the
+   file in Overleaf and press **Refresh**.
+
+Tables and numbers are pasted into `main.tex` directly. Text edits on
+Overleaf do not come back to the repository in this mode, so copy the final
+`.tex` into `paper/` (or download the project as a zip) before archiving
+the release.
 
 (overleaf-subtree)=
-## A. git subtree of `paper/` (recommended)
+## B. git subtree of `paper/` (recommended)
 
 Overleaf exposes every project as a git repository at
 `https://git.overleaf.com/<project id>`, with a single branch called
@@ -74,7 +97,7 @@ directory here, so co-authors on Overleaf never see the code and data.
   `overleaf_sync.sh` if that becomes a problem.
 
 (overleaf-github)=
-## B. Overleaf GitHub sync
+## C. Overleaf GitHub sync
 
 Overleaf can link a project directly to a GitHub repository
 (**Menu → GitHub**). It is simpler to set up, but it syncs the **whole
@@ -91,26 +114,3 @@ To use it with this layout:
 
 This works best when the data products are small and the repository is a
 manageable size for Overleaf.
-
-(overleaf-url)=
-## C. Figures from an external URL (free plan)
-
-Without git integration, Overleaf can still import individual files from a
-URL and refresh them later. Because the figures are committed to a public
-repository, each one has a stable URL:
-
-```text
-https://raw.githubusercontent.com/icg-gravwaves/paper-release-template/main/paper/figure_1_measurements.pdf
-```
-
-Replace the organisation and repository with your own.
-
-1. In Overleaf, **Upload → From external URL**, paste the URL, and name the
-   file `figure_1_measurements.pdf`.
-2. When the notebook changes the figure, push to GitHub, then click the
-   file in Overleaf and press **Refresh**.
-
-Tables and numbers are pasted into `main.tex` directly. Text edits on
-Overleaf do not come back to the repository in this mode, so copy the final
-`.tex` into `paper/` (or download the project as a zip) before archiving
-the release.
