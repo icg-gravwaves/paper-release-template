@@ -5,16 +5,25 @@ notebooks. The aim is to keep **one copy of the paper**, `paper/`, that is
 both what Overleaf edits and what the notebooks write into.
 
 There are three ways to connect them. Pick based on which Overleaf plan your
-group has.
+group has, and whether the GitHub repository is public.
 
 | Approach | Overleaf plan needed | What Overleaf sees | Direction |
 |---|---|---|---|
-| [A. Files from external URL](overleaf-url) | Free | Individual figures | Repository → Overleaf |
+| [A. Files from external URL](overleaf-url) | Free, but the **GitHub repository must be public** | Individual figures | Repository → Overleaf |
 | [B. git subtree](overleaf-subtree) | Git integration (paid or institutional) | Only `paper/` | Both ways |
 | [C. GitHub sync](overleaf-github) | GitHub sync (paid or institutional) | The whole repository | Both ways |
 
 (overleaf-url)=
 ## A. Figures from an external URL (free plan)
+
+```{important}
+This only works while the GitHub repository is **public**. Overleaf fetches
+the file anonymously, and `raw.githubusercontent.com` returns "404 Not
+Found" for files in a private repository, so the import and every later
+**Refresh** fail. If the repository stays private until the paper is
+published, upload the figures by hand instead (**Upload → From computer**)
+each time they change, or use option B or C.
+```
 
 Without git integration, Overleaf can still import individual files from a
 URL and refresh them later. Because the figures are committed to a public
