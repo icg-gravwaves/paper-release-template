@@ -48,7 +48,7 @@
 % TEMPLATE: replace the title, authors and affiliations with your own, and
 % add each author's ORCID iD after their name with \orcidlink{<iD>}.
 \title{Reproducible by construction: a paper that documents its own release}
-\author[1]{Gareth Cabourn Davies}
+\author[1]{Gareth Cabourn Davies\,\orcidlink{0000-0002-4289-3439}}
 \author[2]{Second Author}
 \author[2]{Third Author}
 \affil[1]{Institute of Cosmology and Gravitation, University of Portsmouth,
@@ -126,6 +126,16 @@ The software environment is a single conda file pinning
 products are kept in git; binary files over about 1\,MB use Git LFS, which
 keeps only a pointer in the git history; and very large data would be
 archived externally.
+
+\paragraph{Authors and preprints.}
+Authors are identified by ORCID iDs~\cite{orcid}: persistent identifiers
+that link a researcher to their papers, data and software, whatever their
+name or affiliation at the time. The iDs appear on the title page and in
+the release's citation file (\texttt{CITATION.cff}), so the paper and the
+release are credited to the same people. The paper itself can be released
+openly as a preprint on arXiv~\cite{arxiv}, the long-established preprint
+server for physics, mathematics and computer science; other fields have
+equivalents, such as bioRxiv, medRxiv and SocArXiv.
 
 \section{A worked example}
 \label{sec:example}
@@ -247,7 +257,9 @@ Tables and numbers are pasted by hand and only checked automatically;
 figures are regenerated but not compared with the committed files. Git LFS
 storage counts against a quota. Unpinned dependencies of the pinned
 packages can still change, and releasing a full lock file would record
-them too.
+them too. Finally, the approach assumes a manuscript written in LaTeX, as
+is common in physics, astronomy and mathematics; fields that write in word
+processors would need a different route for tables and numbers.
 
 % TEMPLATE: describe your own use of generative AI, or remove this section
 % if none was used. Check your journal's policy.
