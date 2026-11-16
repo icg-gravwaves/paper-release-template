@@ -6,6 +6,11 @@ external archive such as [Zenodo](https://zenodo.org).
 
 ## Released here
 
+The data products are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see
+`data/LICENSE`); please cite the paper if you use them.
+
+
 | File | Stored in | Contents | Produced by |
 |---|---|---|---|
 | `example_measurements.csv` | git (≈1 kB, text) | One row per measurement: group ID (0–3, labelled A–D), `x`, the mean reading `y` and its standard error `y_err` | `analysis/generate_example_data.py` |

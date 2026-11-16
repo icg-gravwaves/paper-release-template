@@ -14,7 +14,7 @@
 ├── common/
 │   └── paths.py           # Shared paths + save_paper_figure / show_for_paper
 ├── .gitattributes         # Which files are stored with Git LFS
-├── data/                  # Released data products
+├── data/                  # Released data products (with their own LICENSE)
 │   ├── *.csv              # Small text products, plain git
 │   └── raw/               # Larger binary products, Git LFS
 ├── analysis/              # Notebooks that make figures/tables + data generation

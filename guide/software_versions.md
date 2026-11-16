@@ -25,25 +25,20 @@ that are only on PyPI could be added in a `pip:` section of the same file.
 
 ## Pinned versions
 
-Each package is pinned to the exact version used:
+This is the `environment.yml` used for the paper, included here directly
+from the repository, so this page always shows the file itself:
 
-| Package | Version | Used for |
-|---|---|---|
-| Python | 3.12.13 | |
-| NumPy | 2.5.5 | Fits and data handling |
-| Matplotlib (`matplotlib-base`) | 3.11.2 | Figures |
-| Jupyter Book | 1.0.4.post1 | Building this site |
-| ipykernel | 7.4.0 | Running the notebooks |
-| ghp-import | 2.1.0 | Publishing the site from a local build |
-| sphinx-book-theme | 1.2.0 | Site theme |
-| pydata-sphinx-theme | 0.16.1 | Site theme |
+```{literalinclude} ../environment.yml
+:language: yaml
+```
 
-Later versions of these packages may change results, stop the code from
-running, or change how the site looks. The two theme packages are pinned
-even though they are only pulled in by Jupyter Book for the last reason: a
-newer theme release adds a second search box to every page.
+Each package is pinned to the exact version used. Later versions may
+change results, stop the code from running, or change how the site looks.
+The two theme packages are pinned even though they are only pulled in by
+Jupyter Book, for the last reason: a newer theme release adds a second
+search box to every page.
 
-Packages that are needed only by the ones above are not pinned, and conda
+Packages that are needed only by the ones listed are not pinned, and conda
 chooses compatible versions for them.
 
 ## If you are adapting this

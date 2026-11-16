@@ -39,14 +39,15 @@ cd paper && make pdf          # compile the paper
 
 ## Licence
 
-This template is released under the [MIT licence](LICENSE).
+The code in this template is released under the [MIT licence](LICENSE),
+and the data products in `data/` under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ([`data/LICENSE`](data/LICENSE)).
 
-<!-- TEMPLATE: review the licence for your own release -->
-When you reuse it for a paper, choose the licence that fits your release
-and update `LICENSE` (and `license:` in `CITATION.cff`). MIT is a common
-choice for code. For data products and text, a Creative Commons licence such
-as [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) is more usual,
-and can be applied to `data/` with a separate licence file there. Check
+<!-- TEMPLATE: review the licences for your own release -->
+When you reuse it for a paper, choose the licences that fit your release
+and update `LICENSE`, `data/LICENSE` and `license:` in `CITATION.cff`. MIT
+is a common choice for code, and a Creative Commons licence such as CC BY
+4.0 is more usual for data and text. Check
 whether your funder, institution or collaboration requires a particular
 licence.
 

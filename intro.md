@@ -1,8 +1,11 @@
 % TEMPLATE: replace the paper title and arXiv link below with your own
 # Example Paper: data release
 
-This is the data release for the paper *Example paper title*
-([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)).
+This is the data release for the paper *Example Paper: releasing code and
+data alongside the text*, by Your Name, Second Author and Third Author
+([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)). The version used
+for the paper is tagged
+[`v1.0`](https://github.com/icg-gravwaves/paper-release-template/tree/v1.0).
 
 We release the code and the small data products behind every figure, table
 and number in the paper. Each page in the table of contents is executed when
@@ -23,7 +26,8 @@ outputs should be **F**indable, **A**ccessible, **I**nteroperable and
   installed to read.
 - **Interoperable:** data products are in open, documented formats (CSV,
   NumPy `.npz`) and the analysis uses standard open-source tools.
-- **Reusable:** there is a licence (`LICENSE`), every figure, table and
+- **Reusable:** the code is under the MIT licence (`LICENSE`) and the data
+  products under CC BY 4.0 (`data/LICENSE`), every figure, table and
   number can be traced to the notebook that made it (table below), and the
   software environment is pinned (`environment.yml`).
 
