@@ -14,7 +14,7 @@ whole set can be restyled at once (for example for a different journal).
 | Font sizes | 8–9 pt | Close to the caption size of a two-column paper |
 | `font.family`, `mathtext.fontset` | Serif, Computer Modern | Matches the LaTeX text and maths without needing LaTeX installed (`text.usetex: False`) |
 | `axes.prop_cycle` | Seaborn "colorblind" palette | Line colours that stay distinguishable for colour-blind readers |
-| Ticks | Inward, on all four sides, minor ticks on | Common style in physics journals |
+| Ticks | Inward, on all four sides, minor ticks on | A common choice for line plots; change it to match your field's journals |
 | `savefig.bbox: tight` | Trim whitespace | Figures sit neatly in the column |
 | `figure.dpi` | 200 | Sharp previews in notebooks and on this site |
 

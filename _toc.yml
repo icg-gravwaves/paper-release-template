@@ -20,3 +20,7 @@ parts:
       - file: guide/figure_style.md
       - file: guide/overleaf.md
       - file: guide/publishing.md
+  - caption: Beyond this example
+    chapters:
+      - file: guide/restricted_data.md
+      - file: guide/open_research_across_disciplines.md

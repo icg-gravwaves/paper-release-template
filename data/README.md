@@ -34,8 +34,8 @@ raw["readings"].shape   # (44, 10000): one row per (group, x) point
 | Store it in | When | Examples |
 |---|---|---|
 | **git** | Text files up to about 1 MB, and figures of normal size. Anything you want to see line-by-line diffs of. | CSV/JSON summaries, `.tex` source, figure PDFs/PNGs |
-| **Git LFS** | Binary files over about 1 MB, and any file over about 10 MB, up to a few hundred MB each. | HDF5, `.npz`, FITS, tarballs, large text tables |
-| **Zenodo** (or similar) | Single files over about 1 GB, a total over a few GB, or data nobody needs to run the notebooks. | Raw datasets, full simulation outputs, MCMC chains |
+| **Git LFS** | Binary files over about 1 MB, and any file over about 10 MB, up to a few hundred MB each. | HDF5, `.npz`, FITS, Parquet, images, tarballs, large text tables |
+| **Zenodo** (or similar) | Single files over about 1 GB, a total over a few GB, or data nobody needs to run the notebooks. | Raw instrument or survey data, full simulation or model outputs, large intermediate results |
 
 Why these limits:
 
@@ -87,6 +87,9 @@ checkout step in `.github/workflows/book.yml`. Every CI run then downloads
 those files and uses LFS bandwidth.
 
 ## Large inputs (not in git)
+
+For data that cannot be shared openly at all (sensitive, embargoed or
+third-party data), see [](../guide/restricted_data.md).
 
 Data too large for LFS should be archived on Zenodo or an institutional
 repository and fetched with a script, for example:
