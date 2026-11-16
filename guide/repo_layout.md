@@ -4,6 +4,8 @@
 .
 ├── _config.yml            # Jupyter Book settings (execution, repo link, theme)
 ├── _toc.yml               # Table of contents: which pages make up the site
+├── _templates/            # Extra page templates (the "generated from" line)
+├── _static/               # Custom CSS
 ├── intro.md               # Landing page of the data release
 ├── environment.yml        # Pinned conda environment (also used by CI)
 ├── LICENSE                # Licence for the release (MIT here)

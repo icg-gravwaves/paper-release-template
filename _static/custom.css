@@ -3,3 +3,10 @@
     display: flex;
     align-items: center;
 }
+
+/* "This page is generated from <file>" line at the end of each page */
+p.source-file {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 2em;
+}

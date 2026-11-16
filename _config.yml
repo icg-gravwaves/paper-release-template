@@ -1,6 +1,6 @@
 # Jupyter Book (v1) configuration for the paper's data release site.
 # TEMPLATE: replace the title and authors with your paper's
-title: "Example paper: data release"
+title: "Example Paper: data release"
 author: Your Name and Co-Author
 logo: ""
 # TEMPLATE: replace with the copyright year(s) and holder for your release.
@@ -25,22 +25,34 @@ exclude_patterns:
 # Only build pages listed in _toc.yml
 only_build_toc_files: true
 
-# TEMPLATE: point this at your own repository (used by the GitHub button)
+# TEMPLATE: point this at your own repository. The header's GitHub button
+# and the per-page source links use repository_url under sphinx: below.
 repository:
   url: https://github.com/icg-gravwaves/paper-release-template
   branch: main
-
-html:
-  use_repository_button: true
-  use_issues_button: false
-  # TEMPLATE: replace with your paper's title
-  extra_footer: |
-    Code and small data products accompanying <em>Example paper</em>.
 
 sphinx:
   config:
     html_css_files:
       - custom.css
+    # Extra page templates; see guide/site_layout.md
+    templates_path:
+      - _templates
+    # Theme settings for the site's navigation, header buttons and footer
+    # (see guide/site_layout.md). Setting html_theme_options here replaces
+    # the ones Jupyter Book would otherwise derive from an html: section, so
+    # all of them are set here instead.
     html_theme_options:
+      # TEMPLATE: point these at your own repository
+      repository_url: https://github.com/icg-gravwaves/paper-release-template
+      repository_branch: main
+      path_to_docs: ""
+      use_repository_button: true
+      # TEMPLATE: replace with your paper's title
+      extra_footer: |
+        Code and small data products accompanying <em>Example Paper</em>.
       # Search lives in the left sidebar; don't repeat it in the top header bar
       navbar_persistent: []
+      # "This page is generated from <file>" at the bottom of every page
+      article_footer_items:
+        - source-file.html

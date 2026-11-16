@@ -1,5 +1,5 @@
 % TEMPLATE: replace the paper title and arXiv link below with your own
-# Data release
+# Example Paper: data release
 
 This is the data release for the paper *Example paper title*
 ([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)).

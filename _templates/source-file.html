@@ -1,0 +1,14 @@
+{#- Footer line on every page naming the repository file it was built from.
+    Enabled by article_footer_items in _config.yml. -#}
+{%- if pagename and page_source_suffix %}
+{%- set source_path = pagename + page_source_suffix %}
+<p class="source-file">
+  This page is generated from
+  {%- if theme_repository_url %}
+  <a href="{{ theme_repository_url }}/blob/{{ theme_repository_branch or 'main' }}/{{ source_path }}"><code>{{ source_path }}</code></a>
+  {%- else %}
+  <code>{{ source_path }}</code>
+  {%- endif %}
+  in the repository.
+</p>
+{%- endif %}
